@@ -1,0 +1,6 @@
+export {default as Nav} from './Nav.jsx'
+export {default as Landing} from './Landing.jsx'
+export {default as Card} from './Card.jsx'
+export {default as Tutor} from './BecomeTutor.jsx'
+export {default as FooterBar} from './Footer.jsx'
+export {default as Header} from './Header.jsx'
