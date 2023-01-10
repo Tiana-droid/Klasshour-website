@@ -12,19 +12,7 @@ const FooterWrap = styled.div`
   margin-top: 7%;
 `;
 const FooterContainer = styled.footer`
-  width: 100%;
-  height: fit-content;
-  background: #161b45;
-  border-top: 10px solid #f15e38;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: flex-start;
-  color: rgba(255, 252, 251, 0.9);
-  justify-content: center;
   padding: 10px 20px;
-  column-gap: 7em;
-  row-gap: 3em;
-  margin-top: 7%;
   width: 100%;
   height: fit-content;
   display: grid;
@@ -32,7 +20,6 @@ const FooterContainer = styled.footer`
   align-items: flex-start;
   color: rgba(255, 252, 251, 0.9);
   justify-content: center;
-  padding: 10px;
   gap: 3em;
 
     & h3
@@ -93,7 +80,6 @@ const SM = styled.div`
     gap: 24px;
   width: 185px;
   height: 24px;
-
     justify-content: space-between;
     margin-top: 20px;
 `;
