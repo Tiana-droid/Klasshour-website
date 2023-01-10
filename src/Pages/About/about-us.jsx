@@ -8,9 +8,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import Head from "next/head";
-import { Header, FooterBar } from "../../components";
+import { FooterBar, Nav } from "../../components";
 import { About } from "../../Assets";
 import styled from "styled-components";
+import { ContainerWrap } from "../../components/Landing";
 
 const Image = styled.img`
 height: 452px;
@@ -56,7 +57,8 @@ export default function AboutUs() {
         <title>About Us | Klasshour</title>
         <link rel="icon" href="../img/home_logo.png" />
       </Head>
-      <Header />
+      <Nav />
+      <ContainerWrap>
       <Center h={{ base: "200", lg: "280" }} color="white" bg="#161b45">
         <Container maxW="6xl">
           <Box textAlign="center">
@@ -69,6 +71,7 @@ export default function AboutUs() {
           </Box>
         </Container>
       </Center>
+      </ContainerWrap>
       <Container minH="70vh" maxW="6xl" bg="">
         <Center
           flexDirection={{ base: "column", lg: "row" }}

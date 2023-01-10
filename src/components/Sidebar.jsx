@@ -121,10 +121,10 @@ const Sidebar = ({active}) => {
             <a href="https://blog.klasshour.com/">Blog</a>
           </li>
           <li>
-            <Link to="contact">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <Link to="become a tutor">Become a tutor</Link>
+            <Link to="/">Become a tutor</Link>
           </li>
         </SideList>
         <SideReg>

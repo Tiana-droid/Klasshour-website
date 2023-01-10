@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 import {LogoImg } from "../Assets";
 import{
   Flex,
@@ -13,7 +14,6 @@ import{
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
-  Link,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import styled from "styled-components";
@@ -22,6 +22,61 @@ const Image = styled.img`
 height: 48px;
 width: 80%;
 `
+const List = styled.ul`
+width: 100%;
+display: flex;
+list-style-type: none;
+justify content: center;
+align-items: center;
+flex-wrap: wrap;
+padding: 10px;
+gap: 2em;
+
+& li {
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+
+  & a {
+    text-decoration: none;
+    color: #161B45;
+
+    &:hover {
+      text-decoration: underline
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  display: none;
+}
+`
+const Reg = styled(List)`
+padding: 0px;
+gap: 24px;
+font-weight: 700;
+font-size: 1em;
+
+& #log {
+  color: #F15E38;
+  text-decoration: none;
+}
+
+& #reg {
+  width: 164px;
+  height: 54px;
+padding: 10px;
+gap: 10px;
+border: none;
+background: #F15E38;
+border-radius: 9px;
+color: rgba(255, 252, 251, 0.9);
+}
+
+@media (max-width: 1200px) {
+  display: none;
+}
+` 
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -37,7 +92,7 @@ const Header = () => {
         h="105px"
       >
         <Box>
-          <Link href="/">
+          <Link to="/">
             <Image
               src={LogoImg}
               width={500}
@@ -47,47 +102,22 @@ const Header = () => {
           </Link>
         </Box>
         <Box>
-          <UnorderedList display="flex" gap={4} style={{ listStyle: "none" }}>
-            <ListItem fontWeight={800}>
-              <Link href="./">Home</Link>
-            </ListItem>
-            <ListItem fontWeight={800}>
-              <Link href="./about-us">About us</Link>
-            </ListItem>
-            <ListItem fontWeight={800}>
-              <Link href="./faq">FAQ</Link>
-            </ListItem>
-            <ListItem fontWeight={800}>
-              <Link href="./contact">Contact</Link>
-            </ListItem>
-            <ListItem fontWeight={800}>
-              <Link href="./">Support</Link>
-            </ListItem>
-            <ListItem fontWeight={800}>
-              <Link href="https://blog.klasshour.com/">Blog</Link>
-            </ListItem>
-          </UnorderedList>
+        <List>
+        <li><Link to ="/">Home</Link></li>
+        <li><Link to ="/about">About us</Link></li>
+        <li><Link to='/faq'>FAQ</Link></li>
+        <li><Link to="/">Support</Link></li>
+        <li><a href= "https://blog.klasshour.com/">Blog</a></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/">Become a tutor</Link></li>
+      </List>
+      
         </Box>
         <Box>
-          <UnorderedList
-            display="flex"
-            gap={4}
-            alignItems="center"
-            style={{ listStyle: "none" }}
-          >
-            <ListItem fontWeight={500} color="#F15E38">
-              {/* <Link href="./auth/Login">Login</Link> */}
-            </ListItem>
-            <ListItem>
-              <Button
-                backgroundColor="#F15E38"
-                color="#fff"
-                _hover={{ backgroundColor: "#ff6943" }}
-              >
-                <Link href="https://app.klasshour.com">Account</Link>
-              </Button>
-            </ListItem>
-          </UnorderedList>
+        <Reg>
+        <a href="/" id='log'>Login</a>
+        <a href="/"><button id='reg'>Register</button></a>
+      </Reg>
         </Box>
       </Flex>
       <Flex

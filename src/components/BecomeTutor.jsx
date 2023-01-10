@@ -7,11 +7,16 @@ const Wrapper = styled.div`
   margin: auto;
   margin-top: 10%;
   text-align: center;
+  height: fit-content
 
+  @media (max-width: 350px) {
+    width: 95%;
+    margin: auto;
+}
 
   & h1 {
     font-weight: 800;
-    font-size: 5.3vh;
+    font-size: 54px;
     line-height: 63px;
     text-align: center;
     color: #161b45;
@@ -31,7 +36,7 @@ const Wrapper = styled.div`
 
     & p {
       font-weight: 400;
-      font-size: 2.4vh;
+      font-size: 24px;
       line-height: 28px;
       text-align: center;
       color: #292929;
@@ -49,9 +54,9 @@ const Wrapper = styled.div`
       border-radius: 9px;
       border: none;
       outline: none;
-      font-size: 2.3vh;
+      font-size: 16px;
       color: rgba(255, 252, 251, 0.9);
-      width: 70%;
+      width: 34%;
       height: 54px;
     }
   }
@@ -104,6 +109,7 @@ const Steps = styled.div`
 
   & .steps {
     display: flex;
+    height: 387px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -137,7 +143,7 @@ const Steps = styled.div`
 
     & h3 {
       font-weight: 800;
-      font-size: 3vh;
+      font-size: 2em;
       line-height: 38px;
       text-align: center;
       color: #161b45;
@@ -146,7 +152,7 @@ const Steps = styled.div`
 
     & p {
       font-weight: 400;
-      font-size: 2vh;
+      font-size: 1em;
       line-height: 29px;
       text-align: center;
       color: #292929;

@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import Sidebar from './Sidebar'
 
 const Header = styled.div`
-width: 98%;
+width: 100%;
 margin: auto;
 height: 105px;
 gap: 48px;
@@ -54,7 +54,7 @@ gap: 2em;
 
 & li {
   font-weight: 700;
-  font-size: 2.4vh;
+  font-size: 16px;
   text-align: center;
 
   & a {
@@ -75,7 +75,7 @@ const Reg = styled(List)`
 padding: 0px;
 gap: 24px;
 font-weight: 700;
-font-size: 2.2vh;
+font-size: 1em;
 
 & #log {
   color: #F15E38;
@@ -83,6 +83,8 @@ font-size: 2.2vh;
 }
 
 & #reg {
+  width: 164px;
+  height: 54px;
 padding: 10px;
 gap: 10px;
 border: none;
@@ -105,15 +107,18 @@ const Nav = () => {
     <>
     <Header>
       <Logo>
+        <Link to='/'>
         <img src={LogoImg} alt=""/>
+        </Link>
       </Logo>
       <List>
-        <li><Link to ="about">About us</Link></li>
-        <li><Link to="faq">FAQ</Link></li>
+        <li><Link to ="/">Home</Link></li>
+        <li><Link to ="/about">About us</Link></li>
+        <li><Link to="/faq">FAQ</Link></li>
         <li><Link to="/">Support</Link></li>
         <li><a href= "https://blog.klasshour.com/">Blog</a></li>
-        <li><Link to="contact">Contact</Link></li>
-        <li><Link to="become a tutor">Become a tutor</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+        <li><Link to="/">Become a tutor</Link></li>
       </List>
       <Reg>
         <a href="/" id='log'>Login</a>

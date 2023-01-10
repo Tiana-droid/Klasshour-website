@@ -17,7 +17,8 @@ import {
   chakra,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { Header, FooterBar } from "../../components";
+import { FooterBar, Nav } from "../../components";
+import { ContainerWrap } from "../../components/Landing";
 
 export default function request() {
   return (
@@ -26,19 +27,21 @@ export default function request() {
         <title>FAQ | Klasshour</title>
         <link rel="icon" href="../img/home_logo.png" />
       </Head>
-      <Header />
-      <Center minH={{ base: "200", lg: "280" }} color="white" bg="#161b45">
-        <Container maxW="6xl">
-          <Stack as={Center} textAlign="center">
-            <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
-              Frequently Asked Questions.
-            </Heading>
-            <Text pb="6" fontWeight="sm" fontSize="lg">
-              Ask questions, improves your learning
-            </Text>
-          </Stack>
-        </Container>
-      </Center>
+      <Nav />
+      <ContainerWrap>
+        <Center minH={{ base: "200", lg: "280" }} color="white" bg="#161b45">
+          <Container maxW="6xl">
+            <Stack as={Center} textAlign="center">
+              <Heading fontSize={{ base: "2xl", lg: "3xl" }}>
+                Frequently Asked Questions.
+              </Heading>
+              <Text pb="6" fontWeight="sm" fontSize="lg">
+                Ask questions, improves your learning
+              </Text>
+            </Stack>
+          </Container>
+        </Center>
+      </ContainerWrap>
 
       <Container maxW="6xl">
         <Box>

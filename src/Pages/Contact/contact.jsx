@@ -20,7 +20,8 @@ import Head from "next/head";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import axios from "axios";
-import { Header, FooterBar } from "../../components";
+import { FooterBar, Nav } from "../../components";
+import { ContainerWrap } from "../../components/Landing";
 
 export default function Contact() {
   const toast = useToast();
@@ -90,7 +91,8 @@ export default function Contact() {
         <title>Contact | Klasshour</title>
         <link rel="icon" href="../img/home_logo.png" />
       </Head>
-      <Header />
+      <Nav />
+      <ContainerWrap>
       <Center minH={{ base: "200", lg: "280" }} color="white" bg="#161b45">
         <Container maxW="6xl">
           <Stack as={Center} textAlign="center">
@@ -101,6 +103,7 @@ export default function Contact() {
           </Stack>
         </Container>
       </Center>
+      </ContainerWrap>
       <Container maxW="6xl">
         <Stack
           direction={{ base: "column", lg: "row" }}

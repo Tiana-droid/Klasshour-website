@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // import  {AppProps} from "next/app"
 
 const Cover = styled.div`
-background: rgba(255, 252, 251, 0.9);
+background: #E5E5E5;
 width: 100%;
 height: fit-content;
 
@@ -23,8 +23,8 @@ function App() {
         <Route path='/' element={<Home/>}></Route>
         <Route path='/about' element={<About/>}></Route>
         <Route path='/faq' element={<FAQ/>}></Route>
-        <Route path='/contact' element={<Contact/>}></Route>
-        <Route path='/become a tutor' element={<Tutor/>}></Route>
+        <Route path='contact' element={<Contact/>}></Route>
+        <Route path='become a tutor' element={<Tutor/>}></Route>
       </Routes>
     </Cover>
   );
