@@ -139,7 +139,7 @@ const Footer = () => {
                 <a href="https://blog.klasshour.com/">Blog</a>
               </li>
               <li>
-                <a href="/become a tutor">Become a tutor</a>
+                <Link to="/">Become a tutor</Link>
               </li>
             </List>
           </div>
@@ -156,7 +156,7 @@ const Footer = () => {
                 <a href="https://blog.klasshour.com/">Blog</a>
               </li>
               <li>
-                <a href="/become a tutor">Become a tutor</a>
+              <Link to="/">Become a tutor</Link>
               </li>
             </List>
           </div>
