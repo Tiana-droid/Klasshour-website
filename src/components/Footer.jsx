@@ -14,15 +14,19 @@ color: rgba(255, 252, 251, 0.9);
 justify-content: center;
 padding: 10px;
 column-gap: 7em;
-row-gap: 1em;
+row-gap: 3em;
 margin-top: 7%;
 
-& h4, span{
+& h3, span{
   font-weight: 600;
-font-size: 16px;
+font-size: 18px;
 line-height: 20px;
 letter-spacing: 0.25px;
 color: rgba(255, 252, 251, 0.9);
+
+@media (max-width: 549px) {
+  text-align: justify
+}
 }
  & span {
   font-weight: 400 !important;
@@ -35,8 +39,12 @@ list-style-type: none;
 padding: 10px;
 text-align: center;
 
+@media (max-width: 549px) {
+  text-align: justify
+}
+
 & li {
-  font-size: 1.8vh;
+  font-size: 2vh;
   margin-top: 9px;
 
   & a {
@@ -49,7 +57,9 @@ const SM = styled.div`
 width: 100%;
 display: flex;
 align-items: center;
+gap: 10px;
 justify-content: space-between;
+margin-top: 20px;
 `
 
 const Footer = () => {
@@ -64,7 +74,7 @@ const Footer = () => {
       </div>
 
       <div className="div2" style={{width: '100%', textAlign: 'center'}}>
-        <h4>Company</h4>
+        <h3>Company</h3>
         <List>
         <li><a href= "/">About us</a></li>
         <li><a href= "/">FAQ</a></li>
@@ -74,8 +84,8 @@ const Footer = () => {
         </List>
       </div>
 
-      <div className="div3" style={{width: '50%'}}>
-        <h4>Follow us</h4>
+      <div className="div3" style={{width: '60%'}}>
+        <h3>Follow us</h3>
         <SM>
           <a href='/' className="icon"> <img src={Twitter} alt="" /></a>
           <a href='/' className="icon"><img src={Facebook} alt="" /></a>

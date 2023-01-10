@@ -8,25 +8,34 @@ const Wrapper = styled.div`
   margin-top: 10%;
   text-align: center;
 
+
   & h1 {
     font-weight: 800;
     font-size: 5.3vh;
     line-height: 63px;
     text-align: center;
     color: #161b45;
+    margin-block-end: 1em;
   }
 
   & .tutorReg {
+    margin-top: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: fit-content;
+
+    & h1 {
+      margin: 30px 0px;
+    }
 
     & p {
       font-weight: 400;
-      font-size: 2.6vh;
+      font-size: 2.4vh;
       line-height: 28px;
       text-align: center;
       color: #292929;
+      margin-bottom: 2em;
     }
   
     & button {
@@ -69,6 +78,7 @@ const StepsContainer = styled.div`
       justify-content: flex-end;
       align-items: center;
       margin-top: 50px;
+      display: none;
 
       & img {
         display: none;
@@ -137,7 +147,7 @@ const Steps = styled.div`
     & p {
       font-weight: 400;
       font-size: 2vh;
-      line-height: 19px;
+      line-height: 29px;
       text-align: center;
       color: #292929;
     }

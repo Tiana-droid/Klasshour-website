@@ -3,19 +3,14 @@ import Head from "next/head";
 import {
   Box,
   Container,
-  Flex,
   Heading,
   Text,
   Stack,
-  Divider,
   Center,
   Image,
   Button,
-  HStack,
-  chakra,
 } from "@chakra-ui/react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-// import Carousel from "nuka-carousel";
 import Link from "next/link";
 import { Header, FooterBar } from "../../components";
 import { useRouter } from "next/router";
