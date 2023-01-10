@@ -14,6 +14,19 @@ const FooterWrap = styled.div`
 const FooterContainer = styled.footer`
   width: 100%;
   height: fit-content;
+  background: #161b45;
+  border-top: 10px solid #f15e38;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: flex-start;
+  color: rgba(255, 252, 251, 0.9);
+  justify-content: center;
+  padding: 10px 20px;
+  column-gap: 7em;
+  row-gap: 3em;
+  margin-top: 7%;
+  width: 100%;
+  height: fit-content;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: flex-start;
@@ -22,12 +35,13 @@ const FooterContainer = styled.footer`
   padding: 10px;
   gap: 3em;
 
-  & h3 {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 20px;
-    letter-spacing: 0.25px;
-    color: rgba(255, 252, 251, 0.9);
+    & h3
+   {
+      font-weight: 600;
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 0.25px;
+        color: rgba(255, 252, 251, 0.9);
 
     @media (max-width: 549px) {
       text-align: justify;
@@ -51,19 +65,19 @@ const FooterContainer = styled.footer`
   }
 `;
 const List = styled.ul`
-  width: 100%;
-  list-style-type: none;
-  padding: 10px;
-  text-align: left;
+    width: 100%;
+    list-style-type: none;
+    padding: 10px;
+    text-align: left;
 
-  @media (max-width: 549px) {
-    text-align: justify;
-  }
+    @media (max-width: 549px) {
+      text-align: justify;;
+    }
 
-  & li {
-    font-size: 16px;
+    & li {
+      font-size: 16px;
     font-weight: 400;
-    margin-top: 9px;
+      margin-top: 9px;
 
     & a {
       text-decoration: none;
@@ -72,23 +86,23 @@ const List = styled.ul`
   }
 `;
 const SM = styled.div`
-  width: 100%;
-  display: flex;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
   padding: 0px 10px;
-  gap: 24px;
+    gap: 24px;
   width: 185px;
   height: 24px;
 
-  justify-content: space-between;
-  margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
 `;
 const SM2 = styled(SM)`
   width: 165px;
   height: 24px;
   margin-top: 0;
 `;
-const Copyright = styled.div`
+const Copyright = styled.div`;
   width: 100%;
   border-top: 0.5px solid #ffffff;
   padding: 10px;
