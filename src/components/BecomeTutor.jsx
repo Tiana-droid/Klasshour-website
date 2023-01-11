@@ -1,26 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import { Arrow, Arrow2 } from "../Assets";
+import {Arrow} from "../Assets";
 
 const Wrapper = styled.div`
-  width: 76%;
+  width: 84%;
   margin: auto;
   margin-top: 10%;
   text-align: center;
   height: fit-content
 
   @media (max-width: 350px) {
-    width: 95%;
+    width: 100%;
     margin: auto;
 }
 
   & h1 {
     font-weight: 800;
     font-size: 54px;
-    line-height: 63px;
     text-align: center;
     color: #161b45;
     margin-block-end: 1em;
+
+    @media (max-width: 550px) {
+      font-size: 42px;
+      margin-top: 30%;
+   }
   }
 
   & .tutorReg {
@@ -32,12 +36,16 @@ const Wrapper = styled.div`
 
     & h1 {
       margin: 30px 0px;
+
+      @media (max-width: 550px) {
+       font-size: 42px;
+       margin-top: 20%;
+      }
     }
 
     & p {
       font-weight: 400;
       font-size: 24px;
-      line-height: 28px;
       text-align: center;
       color: #292929;
       margin-bottom: 2em;
@@ -88,15 +96,6 @@ const StepsContainer = styled.div`
       & img {
         display: none;
       }
-
-      & .arr {
-        width: 55%;
-        height: 58vh;
-        display: block;
-        background-image: url(${Arrow2});
-        background-repeat: no-repeat;
-        background-position: right;
-      }
     }
   }
 `;
@@ -104,7 +103,7 @@ const StepsContainer = styled.div`
 const Steps = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2em;
 
   & .steps {
@@ -169,8 +168,6 @@ const BecomeTutor = () => {
           <div className="arrow">
             <img src={Arrow} alt="" />
             <img src={Arrow} alt="" />
-            <div className="arr"></div>
-            <div className="arr"></div>
           </div>
           <Steps>
             <div className="steps">

@@ -5,11 +5,11 @@ import { Credit, Rafik, Researching, Skill, Teaching, Test } from "../Assets";
 const CardContainer = styled.div`
   margin: auto;
   margin-top: 6%;
-  width: 76%;
+  width: 80%;
   height: fit-content;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2em;
+  gap: 3em;
   justify-content: center;
   align-items: center;
 `;
@@ -26,10 +26,13 @@ const CardContent = styled.div`
   height: 381px;
   padding: 20px;
 
+  & img {
+    margin-bottom: 37px;
+  }
+
   & h3 {
     font-weight: 800;
     font-size: 2em;
-    line-height: 38px;
     text-align: center;
     color: #161b45;
     margin-block-end: 0;
@@ -48,36 +51,72 @@ const CardContent = styled.div`
 const BigCard = styled.div`
   display: flex;
   flex-direction: column;
-  width: 76%;
+  width: 81%;
   margin: auto;
   gap: 4em;
-  margin-top: 8%;
-
-  @media (max-width: 350px) {
-    width: 98%;
-    margin: auto;
+  margin-top: 10%;
+  
+  @media (max-width: 830px) {
     margin-top: 18%;
-}
+  }
+  @media (max-width: 570px) {
+    width: 95%;
+    margin: auto;
+    margin-top: 30% !important;
+  }
+  @media (max-width: 300px) {
+    width: 100%;
+    margin: auto;
+    margin-top: 30%;
+  }
 `;
 const BC = styled(CardContent)`
-  flex-direction: row;
-  height: fit-content;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-items: center;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  height: 560px;
 
-  & h3 {
+  @media (max-width: 830px) {
+    height: fit-content;
+  }
+
+  @media (max-width: 421px) {
+    padding: 20px 0px;
+  }
+
+  & h1 {
     font-size: 32px;
     text-align: left;
+    margin: auto;
+    width: 90%;
+    margin-block-end: 0.67em;
+    font-weight: 800;
+    
+    @media (max-width: 830px) {
+      text-align: center;
+    }
 
     @media (max-width: 650px) {
-        font-size: 27px;
+      font-size: 27px;
     }
   }
+
   & p {
     text-align: left;
-    margin: 0;
+    margin: auto;
+    width: 90%;
+    line-height: 23px;
+
+    @media (max-width: 830px) {
+      text-align: center;
+    }
   }
 
   & img {
-    width: 50%;
+    width: 90%;
   }
 `;
 
@@ -107,9 +146,9 @@ const Card = () => {
 
       <BigCard>
         <BC>
-          <img src={Researching} alt="img" />
-          <div style={{float: 'right'}}>
-            <h3>Get complicated questions answered</h3>
+          <img src={Researching} alt="img" style={{ width: "75%" }} />
+          <div>
+            <h1>Get complicated questions answered</h1>
             <p>
               You will only pay after you have concluded your session/minutes
               with your tutor
@@ -118,7 +157,7 @@ const Card = () => {
         </BC>
         <BC>
           <div>
-            <h3>Charge per minute</h3>
+            <h1>Charge per minute</h1>
             <p>
               No minimum or limits to class you can take, you will only be
               charged for the minute of tutoring
@@ -129,7 +168,7 @@ const Card = () => {
         <BC>
           <img src={Credit} alt="img" />
           <div>
-            <h3>Pay after a session</h3>
+            <h1>Pay after a session</h1>
             <p>
               You will only pay after you have concluded your session/minutes
               with your tutor.

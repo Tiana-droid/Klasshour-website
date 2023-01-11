@@ -47,6 +47,11 @@ const Text = styled.div`
   margin-left: 40px;
   text-align: left;
 
+  @media (max-width: 600px) {
+    text-align: center;
+    margin-left: 10px;
+  }
+
   & h1 {
     text-transform: uppercase;
     color: #161b45;
@@ -55,6 +60,10 @@ const Text = styled.div`
     line-height: 63px;
     margin-block-start: -1.4em;
     margin-block-end: 0px;
+
+    @media (max-width: 600px) {
+      font-size: 42px;
+    }
 
     @media (max-width: 1115px) {
       margin-block-start: -0.67em;
@@ -66,6 +75,10 @@ const Text = styled.div`
     font-weight: 500;
     font-size: 24px;
     line-height: 28px;
+
+    @media (max-width: 600px) {
+      font-size: 21px;
+    }
   }
   & button {
     padding: 10px;
