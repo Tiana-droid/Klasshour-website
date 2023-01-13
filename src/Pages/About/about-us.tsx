@@ -11,15 +11,27 @@ import Head from "next/head";
 import { FooterBar, Nav } from "../../components";
 import { About } from "../../Assets";
 import styled from "styled-components";
-import { ContainerWrap } from "../../components/Landing";
 
 const Image = styled.img`
 height: 452px;
 width: 430px;
 `
+const ContainerWrap = styled.div`
+  width: 100%;
+  background: #f6f6f8;
+  height: fit-content;
+  margin-top: 10%;
+  padding: 20px 0px;
+  @media (max-width: 1115px) {
+    margin-top: 20%;
+  }
+  @media (max-width: 670px) {
+    margin-top: 30%;
+  }
+`;
 
 export default function AboutUs() {
-  function Values({ title, icon, desc, ...rest }) {
+  function Values({ title, icon, desc, ...rest } :any) {
     return (
       <Stack
         h="378px"
@@ -58,6 +70,7 @@ export default function AboutUs() {
         <link rel="icon" href="../img/home_logo.png" />
       </Head>
       <Nav />
+      
       <ContainerWrap>
       <Center h={{ base: "200", lg: "280" }} color="white" bg="#161b45">
         <Container maxW="6xl">

@@ -3,7 +3,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Bar = styled.div`
+const Bar = styled.div<{sidebar: string}>`
   width: 40%;
   position: absolute;
   margin-right: 0;
@@ -46,7 +46,7 @@ margin-top: 33% !important;
 width: 100%;
 display: flex;
 list-style-type: none;
-justify content: center;
+justify-content: center;
 align-items: center;
 flex-wrap: wrap;
 padding: 10px;

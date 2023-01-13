@@ -21,7 +21,21 @@ import * as Yup from "yup";
 import { useFormik } from "formik";
 import axios from "axios";
 import { FooterBar, Nav } from "../../components";
-import { ContainerWrap } from "../../components/Landing";
+import styled from "styled-components";
+
+const ContainerWrap = styled.div`
+  width: 100%;
+  background: #f6f6f8;
+  height: fit-content;
+  margin-top: 10%;
+  padding: 20px 0px;
+  @media (max-width: 1115px) {
+    margin-top: 20%;
+  }
+  @media (max-width: 670px) {
+    margin-top: 30%;
+  }
+`;
 
 export default function Contact() {
   const toast = useToast();

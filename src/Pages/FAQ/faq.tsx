@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import Head from "next/head";
 import {
   Box,
@@ -18,7 +19,20 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { FooterBar, Nav } from "../../components";
-import { ContainerWrap } from "../../components/Landing";
+
+const ContainerWrap = styled.div`
+  width: 100%;
+  background: #f6f6f8;
+  height: fit-content;
+  margin-top: 10%;
+  padding: 20px 0px;
+  @media (max-width: 1115px) {
+    margin-top: 20%;
+  }
+  @media (max-width: 670px) {
+    margin-top: 30%;
+  }
+`;
 
 export default function request() {
   return (

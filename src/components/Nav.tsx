@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { LogoImg } from '../Assets'
 import {BiMenuAltRight} from 'react-icons/bi'
 import { Link } from 'react-router-dom'
-import Sidebar from './Sidebar'
+import {SideBar} from '.'
 
 const Header = styled.div`
 width: 100%;
@@ -46,7 +46,7 @@ const List = styled.ul`
 width: 100%;
 display: flex;
 list-style-type: none;
-justify content: center;
+justify-content: center;
 align-items: center;
 flex-wrap: wrap;
 padding: 10px;
@@ -127,7 +127,7 @@ const Nav = () => {
 
       {/* SideBar links starts here */}
         <BiMenuAltRight className='menu' onClick={openSidebar} style={{cursor: 'pointer'}}/>
-        {sidebar && <Sidebar active={setSideBar}/>}
+        {sidebar && <SideBar active={setSideBar}/>}
       {/* Sidebar links end here */}
     </Header>
     </>
